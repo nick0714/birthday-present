@@ -10,15 +10,15 @@ login = ''
 def index(id=None):
     global name, login
     if request.method == 'POST':
-        if request.form.get('account') == 'admin' and request.form.get('pwd') == 'admin':
+        if request.form.get('account') == 'yao' and request.form.get('pwd') == 'admin':
             login = 'success'
-            name = 'admin'
+            name = 'yao'
             return render_template('1.html', name=name, login=login)
         else:
             login = 'fail'
-        if id ==520:
+        if id ==0808:
             return render_template('index.html')
-        if id ==1314:
+        if id ==88:
             return render_template('3.html')
     return render_template('hellow.html')
 
